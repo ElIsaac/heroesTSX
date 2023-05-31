@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Hero: React.FC<IHero> = ({ hero }: { hero: IHero }) => {
   const { id, superhero, publisher, alter_ego, first_appearance, characters } = hero;
   return (
-    <div className="col-md-6 col-lg-4">
+    <div className="col-md-6 col-lg-4 animate__animated animate__fadeIn">
       <div className="card">
         <img className="card-img-top" src={`src/assets/heroes/${id}.jpg`} alt={superhero} />
         <div className="card-body">

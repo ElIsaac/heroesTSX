@@ -20,7 +20,7 @@ const HeroPage = () => {
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-4">
-          <img className="img-thumbnail" src={`/src/assets/heroes/${hero.id}.jpg`} alt={hero.superhero} />
+          <img className="img-thumbnail animate__animated animate__fadeInLeft" src={`/src/assets/heroes/${hero.id}.jpg`} alt={hero.superhero} />
         </div>
         <div className="col-md-8">
 
