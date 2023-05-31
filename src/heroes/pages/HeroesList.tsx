@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {getHeroesByPublisher} from '../helpers/getHeroesByPublisher';
 import Hero from './HeroCard';
 
@@ -7,7 +7,7 @@ interface HeroesListProps {
 }
 
 const HeroesList: React.FC<HeroesListProps> = ({ publisher }) => {
-  const heroes = getHeroesByPublisher(publisher);
+  const heroes = useMemo(()=>getHeroesByPublisher(publisher), [publisher]);
   return (
     <>
     

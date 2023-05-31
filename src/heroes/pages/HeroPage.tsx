@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { getHeroeById } from '../helpers/getHeroeById';
 import { IHero } from '../data/heroes';
@@ -6,7 +6,7 @@ import { IHero } from '../data/heroes';
 const HeroPage = () => {
   const params = useParams();
   const navigate = useNavigate();
-  const hero: IHero | undefined = getHeroeById(params.id);
+  const hero: IHero | undefined = useMemo(() => getHeroeById(params.id), [params.id]); 
 
   const onReturn = (): void => {
     navigate(-1);
