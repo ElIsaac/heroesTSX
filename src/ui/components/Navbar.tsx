@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, NavigateFunction, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
-    const navigate = useNavigate()
+    const navigate: NavigateFunction = useNavigate()
 
-    const handleLogout = () => {
+    const handleLogout: VoidFunction = () => {
         navigate("/login", {
             replace: true
         })
@@ -34,9 +34,15 @@ const Navbar = () => {
 
                     <NavLink
                         className={({ isActive }) => "nav-item nav-link " + (isActive ? "active" : "")}
-                        to="/heroes"
+                        to="/hero"
                     >
                         Hero
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) => "nav-item nav-link " + (isActive ? "active" : "")}
+                        to="/search"
+                    >
+                        Search
                     </NavLink>
                 </div>
             </div>
