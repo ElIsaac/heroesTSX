@@ -1,6 +1,6 @@
 import React from 'react';
 import {getHeroesByPublisher} from '../helpers/getHeroesByPublisher';
-import Hero from './Hero';
+import Hero from './HeroCard';
 
 interface HeroesListProps {
   publisher: string;
