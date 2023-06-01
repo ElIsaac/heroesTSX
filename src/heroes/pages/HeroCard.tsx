@@ -2,7 +2,7 @@ import React from 'react';
 import { IHero } from '../data/heroes';
 import { Link } from 'react-router-dom';
 
-const Hero: React.FC<IHero> = ({ hero }: { hero: IHero }) => {
+const Hero: React.FC<{ hero: IHero }> = ( {hero} ) => {
   const { id, superhero, publisher, alter_ego, first_appearance, characters } = hero;
   return (
     <div className="col-md-6 col-lg-4 animate__animated animate__fadeIn">
